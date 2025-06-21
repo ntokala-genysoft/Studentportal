@@ -1,6 +1,8 @@
 **StudentPortal**: A Modern Web Application for Student Management 📚✨
 
-Welcome to StudentPortal, a feature-rich web application designed to streamline student academic management with an intuitive interface and robust functionality. Built with a powerful tech stack, this project empowers students and educators to manage attendance, subjects, assessments, and scores seamlessly. 🚀
+Welcome to StudentPortal, a feature-rich web application designed to streamline student academic management with an intuitive interface and robust functionality. Built with a powerful tech stack, this project empowers students and educators to manage attendance, subjects, assessments, and scores seamlessly. 
+
+---------------------------------------------------------------------------------------------------------
 
 🌟 **Key Features**
 
@@ -12,6 +14,8 @@ Online Assessments ✍️: Take assessments directly on the platform, with a use
 
 Responsive Design 📱: Enjoy a seamless experience across desktops, tablets, and mobile devices.
 
+---------------------------------------------------------------------------------------------------------
+
 🛠️ **Tech Stack**
 
 Backend: Django 🐍 – A high-level Python framework for rapid and secure development.
@@ -21,6 +25,8 @@ Frontend: React + Vite ⚛️ – A blazing-fast, modern JavaScript library and 
 Database: MySQL 🗄️ – A reliable and scalable relational database for efficient data management.
 
 Styling: Tailwind CSS 🎨 – For a sleek, modern, and responsive design.
+
+---------------------------------------------------------------------------------------------------------
 
 🚀 **Getting Started**
 
@@ -32,6 +38,8 @@ Node.js & npm 📦
 MySQL 🗄️
 
 Git 📂
+
+---------------------------------------------------------------------------------------------------------
 
 **Installation**
 
@@ -60,6 +68,8 @@ npm install
 Update settings.py in the Django backend with your MySQL credentials.
 
 Create the database in MySQL and run migrations.
+
+---------------------------------------------------------------------------------------------------------
 
 **Running the Application**
 
