@@ -19,9 +19,12 @@ Styling: Tailwind CSS 🎨 – For a sleek, modern, and responsive design.
 🚀 **Getting Started**
 
 Prerequisites
+
 Python 3.x 🐍
+
 Node.js & npm 📦
 MySQL 🗄️
+
 Git 📂
 
 **Installation**
