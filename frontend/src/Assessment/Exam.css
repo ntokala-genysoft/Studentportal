@@ -1,0 +1,278 @@
+.exam-page {
+  padding: 40px;
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.page-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-left: 20px;
+  color: #ffffff;
+}
+
+.exam-container {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+.questions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 65%;
+}
+
+.question-container {
+  width: 750px;
+  min-height: 380px;
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.question-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #555;
+  cursor: pointer;
+}
+
+.option input {
+  margin-right: 10px;
+}
+
+.question-buttons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.left-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.review-button,
+.previous-button,
+.next-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.review-button {
+  background: #28a745;
+  color: #fff;
+}
+
+.review-button:hover {
+  background: #218838;
+}
+
+.previous-button {
+  background: #6c757d;
+  color: #fff;
+}
+
+.previous-button:hover {
+  background: #5a6268;
+}
+
+.next-button {
+  background: #007bff;
+  color: #fff;
+}
+
+.next-button:hover {
+  background: #0056b3;
+}
+
+.error-message {
+  color: #ff6b6b;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.no-questions {
+  color: #ddd;
+  font-size: 1rem;
+}
+
+.question-numbers-container {
+  width: 25%;
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.timer {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #dc3545;
+  color: #fff;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
+
+.submit-button:hover {
+  background: #c82333;
+}
+
+.question-numbers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.question-number {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e9ecef;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+}
+
+.question-number.current {
+  background: #007bff;
+  color: #fff;
+}
+
+.question-number.marked {
+  background: #ffc107;
+  color: #333;
+}
+
+.question-number:hover {
+  background: #adb5bd;
+}
+
+.result-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.result-modal-content {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #333;
+}
+
+.result-modal-content h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.result-modal-content p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.result-section {
+  margin-bottom: 20px;
+}
+
+.result-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.result-item {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.result-item p {
+  margin: 5px 0;
+}
+
+.correct {
+  color: #28a745;
+}
+
+.incorrect {
+  color: #dc3545;
+}
+
+.result-submit-button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #dc3545;
+  color: #fff;
+  transition: background 0.3s ease;
+  display: block;
+  margin: 20px auto 0;
+}
+
+.result-submit-button:hover {
+  background: #c82333;
+}

@@ -1,0 +1,96 @@
+
+.assessments-page {
+  padding: 40px;
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  margin-left: 10px; 
+}
+
+.page-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-left: 20px;
+  color: #ffffff;
+}
+
+.assessments-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+.assessment-container {
+  width: 250px; 
+  height: 150px; 
+  background: #fff; 
+  border-radius: 15px; 
+  display: flex;
+  flex-direction: row;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.assessment-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.assessment-left {
+  width: 50%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2); 
+  padding: 20px;
+}
+
+.subject-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+}
+
+.assessment-right {
+  width: 50%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  background: #fff; 
+  color: #333; 
+
+}
+
+.exam-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.exam-details {
+  font-size: 0.75rem;
+  color: #555;
+  margin: 4px 0;
+}
+
+.error-message {
+  color: #ff6b6b;
+  margin-left: 20px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.no-assessments {
+  color: #ddd;
+  margin-left: 20px;
+  font-size: 1rem;
+}

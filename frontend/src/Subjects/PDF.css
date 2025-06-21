@@ -1,0 +1,249 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.min-h-screen.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.w-\[15\%\] {
+  width: 18% !important;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.w-\[85\%\] {
+  width: 82% !important;
+  flex-shrink: 0;
+  flex-grow: 0;
+  background-color: rgb(0, 0, 0);
+}
+
+.min-h-screen {
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+}
+
+@media (max-width: 768px) {
+  .w-\[15\%\] {
+    display: none;
+  }
+  .w-\[85\%\] {
+    width: 100% !important;
+  }
+}
+
+.pdf-page {
+  padding: 40px;
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  margin-left: 10px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  color: #60a5fa;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #ffffff;
+  margin-left: 20px;
+}
+
+.textbook-container {
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 1px;
+  max-width: 896px;
+  margin: 0 auto;
+}
+
+.pages-container {
+  max-height: 600px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  background: transparent;
+  scrollbar-width: none;
+}
+
+.pages-container::-webkit-scrollbar {
+  display: none;
+}
+
+.page-item {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin: 16px 0;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.page {
+  min-height: 500px;
+  padding: 20px;
+}
+
+.page:last-child {
+  border-bottom: none;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #343232;
+}
+
+.paragraph {
+  color: #4b5563;
+  line-height: 1.75;
+}
+
+.mb-4 {
+  margin-bottom: 16px;
+}
+
+.list {
+  list-style-type: disc;
+  padding-left: 24px;
+  color: #4b5563;
+}
+
+.highlighted-text {
+  background-color: #f5dd61; /* Yellow highlight */
+  position: relative;
+  cursor: pointer;
+}
+
+.highlighted-text:not(.no-hover):hover::after {
+  content: attr(data-note);
+  position: fixed;
+  top: var(--note-y);
+  left: var(--note-x);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  z-index: 10;
+  white-space: pre-wrap;
+  max-width: 250px; 
+  max-height: 80px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  font-size: 14px; 
+  line-height: 1.4; 
+}
+
+.note-container {
+  position: fixed;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.message-icon {
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.note-input-container {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.note-display-container {
+  position: fixed;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  max-width: 20px; 
+  max-height: 80px; 
+  overflow-y: auto;
+  scrollbar-width: thin;
+  font-size: 14px; 
+  line-height: 1.4; 
+}
+
+.note-display-container::-webkit-scrollbar {
+  width: 6px; 
+}
+
+.note-display-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 3px;
+}
+
+.note-display-text {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  white-space: pre-wrap;
+}
+
+.note-textarea {
+  width: 200px; 
+  height: 80px;
+  margin-bottom: 8px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: none;
+  font-size: 14px; 
+}
+
+.note-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.note-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.note-button.cancel {
+  background-color: #e0e0e0;
+}
+
+.note-button.add {
+  background-color: #60a5fa;
+  color: #fff;
+}

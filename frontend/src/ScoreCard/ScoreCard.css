@@ -1,0 +1,243 @@
+.score-card-container {
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 16px;
+  padding-top: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  color: white;
+  font-size: 32px;
+  font-family: 'Dancing Script', cursive;
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  margin-right: 8px;
+  font-size: 36px;
+}
+
+.page-title {
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.score-card-content {
+  padding: 16px;
+  padding-bottom: 32px;
+  position: relative;
+}
+
+.podium-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: inherit;
+}
+
+.podium {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  height: 250px;
+  
+}
+
+.podium-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.podium-item.silver {
+  margin-right: 10px;
+}
+
+.podium-item.bronze {
+  margin-left: 10px;
+}
+
+.bar {
+  width: 70px;
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  height: 0;
+  animation: grow 1.5s ease-out forwards;
+  z-index: 3;
+}
+
+@keyframes grow {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: var(--bar-height);
+  }
+}
+
+.gold-bar {
+  --bar-height: 180px;
+  background: #FFD700;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.8), 0 0 30px rgba(255, 215, 0, 0.5);
+}
+
+.silver-bar {
+  --bar-height: 150px;
+  background: #C0C0C0;
+  box-shadow: 0 0 15px rgba(192, 192, 192, 0.8), 0 0 30px rgba(192, 192, 192, 0.5);
+}
+
+.bronze-bar {
+  --bar-height: 120px;
+  background: #CD7F32;
+  box-shadow: 0 0 15px rgba(205, 127, 50, 0.8), 0 0 30px rgba(205, 127, 50, 0.5);
+}
+
+.podium-rank {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 8px;
+  height: 30px;
+}
+
+.percentage {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  height: 20px;
+}
+
+.name {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #ddd;
+  height: 20px;
+}
+
+.rank-list-wrapper {
+  position: absolute;
+  top: 296px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: transparent;
+  border: none;
+  padding: 16px;
+  width: 900px;
+  height: 160px;
+}
+
+.rank-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.rank-list::-webkit-scrollbar {
+  display: none;
+}
+
+.rank-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.rank {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  margin-right: 12px;
+}
+
+.rank-name {
+  font-size: 16px;
+  color: #ddd;
+  flex: 1;
+  text-align: center;
+}
+
+.rank-percentage {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 12px;
+}
+
+.student-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 254, 0.5);
+  opacity: 0;
+  animation: fadeInAvatar 0.5s ease-in forwards;
+  animation-delay: 1.5s;
+}
+
+.rank-student-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 8px;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes fadeInAvatar {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.circular-progress-wrapper {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(168, 85, 247, 0.2), 0 0 10px rgba(168, 85, 247, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.5), 0 0 20px rgba(168, 85, 247, 0.3);
+  }
+}
+
+.circular-progress-wrapper .CircularProgressbar-text {
+  font-size: 25px !important;
+  font-weight: bold !important;
+}
